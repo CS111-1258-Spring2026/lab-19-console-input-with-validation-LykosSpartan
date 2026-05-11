@@ -27,9 +27,12 @@ public static NetflixOriginal instantiateFromInput(Scanner keyboard){
 
 	System.out.println("Enter the name of the Netflix Original: ");
 	name = keyboard.nextLine();
+	
+
 	System.out.println("Enter the star rating of the Netflix Original (0.0 - 5.0): ");
 	starRating = keyboard.nextDouble();
 	keyboard.nextLine(); //consume the newline character left by nextDouble()
+	
 	System.out.println("Enter the genre of the Netflix Original: ");
 	genre = keyboard.nextLine();
 
