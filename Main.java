@@ -13,8 +13,11 @@ public class Main
 	for(int i = 0; i < netflixOriginals.length; i++)
 	{
 		System.out.println(netflixOriginals[i]);
+
 	}
 	keyboard.close();
+
+	
 	}
 
 
@@ -31,9 +34,9 @@ public static NetflixOriginal instantiateFromInput(Scanner keyboard){
 	genre = keyboard.nextLine();
 
 	//do while loop genre
-	while(!genre.equalsIgnoreCase("Action") && !genre.equalsIgnoreCase("Comedy") && !genre.equalsIgnoreCase("Drama") && !genre.equalsIgnoreCase("Horror") && !genre.equalsIgnoreCase("Sci-Fi"))
+	while(!genre.equalsIgnoreCase("Action") && !genre.equalsIgnoreCase("Comedy") && !genre.equalsIgnoreCase("Drama") && !genre.equalsIgnoreCase("Horror") && !genre.equalsIgnoreCase("Science Fiction"))
 	{
-		System.out.println("Invalid genre. Please enter one of the following genres: Action, Comedy, Drama, Horror, Sci-Fi: ");
+		System.out.println("Invalid genre. Please enter one of the following genres: Action, Comedy, Drama, Horror, Science Fiction: ");
 		genre = keyboard.nextLine();
 	}
 	
