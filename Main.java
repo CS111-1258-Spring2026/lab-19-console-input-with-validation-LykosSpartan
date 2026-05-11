@@ -5,18 +5,26 @@ public class Main
 	public static void main(String[] args)
 	{
 		Scanner keyboard = new Scanner(System.in);
-		NetflixOriginal netflixOriginal1 = intstantiateFromImput(keyboard);
-		System.out.println("Netflix Original created: " + netflixOriginal1.getName() + ", " + netflixOriginal1.getStarRating() + " stars, Genre: " + netflixOriginal1.getGenre());
-		keyboard.close();
-
+	NetflixOriginal[] netflixOriginals = new NetflixOriginal[2];
+	for(int i = 0; i < netflixOriginals.length; i++)
+	{
+		netflixOriginals[i] = instantiateFromInput(keyboard);
 	}
-public static NetflixOriginal intstantiateFromImput(Scanner keyboard){
+	for(int i = 0; i < netflixOriginals.length; i++)
+	{
+		System.out.println(netflixOriginals[i]);
+	}
+	keyboard.close();
+	}
+
+
+public static NetflixOriginal instantiateFromInput(Scanner keyboard){
 	String name, genre;
 	double starRating;
 
 	System.out.println("Enter the name of the Netflix Original: ");
 	name = keyboard.nextLine();
-	System.out.println("Enter the star rating of the Netflix Original (0.0 - 5	.0): ");
+	System.out.println("Enter the star rating of the Netflix Original (0.0 - 5.0): ");
 	starRating = keyboard.nextDouble();
 	keyboard.nextLine(); //consume the newline character left by nextDouble()
 	System.out.println("Enter the genre of the Netflix Original: ");
