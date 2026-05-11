@@ -26,15 +26,12 @@ public static NetflixOriginal instantiateFromInput(Scanner keyboard){
 	double starRating;
 
 	System.out.println("Please enter the name of the show: ");
-	name = keyboard.nextLine();
-	
-
+	name = keyboard.next();
 	System.out.println("Please enter the star rating: ");
 	starRating = keyboard.nextDouble();
-	keyboard.nextLine(); //consume the newline character left by nextDouble()
-	
+	keyboard.next(); //consume the newline character left by nextDouble()
 	System.out.println("Please enter the genre: ");
-	genre = keyboard.nextLine();
+	genre = keyboard.next();
 
 	//do while loop genre
 	while(!genre.equalsIgnoreCase("drama") && !genre.equalsIgnoreCase("comedy") && !genre.equalsIgnoreCase("horror") && !genre.equalsIgnoreCase("action") && !genre.equalsIgnoreCase("science fiction") && !genre.equalsIgnoreCase("anime") && !genre.equalsIgnoreCase("reality") && !genre.equalsIgnoreCase("unknown"))
