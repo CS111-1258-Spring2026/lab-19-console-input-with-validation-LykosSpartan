@@ -25,13 +25,14 @@ public static NetflixOriginal instantiateFromInput(Scanner keyboard){
 	String name, genre;
 	double starRating;
 
-	System.out.println("Please enter the name of the show: ");
+	System.out.print("Please enter the name of the show: ");
 	name = keyboard.next();
-	System.out.println("Please enter the star rating: ");
+	System.out.print("Please enter the star rating: ");
 	starRating = keyboard.nextDouble();
 	keyboard.nextLine(); //consume the newline character left by nextDouble()
-	System.out.println("Please enter the genre: ");
+	System.out.print("Please enter the genre: ");
 	genre = keyboard.next();
+
 
 	//do while loop genre
 	while(!genre.equalsIgnoreCase("drama") && !genre.equalsIgnoreCase("comedy") && !genre.equalsIgnoreCase("horror") && !genre.equalsIgnoreCase("action") && !genre.equalsIgnoreCase("science fiction") && !genre.equalsIgnoreCase("anime") && !genre.equalsIgnoreCase("reality") && !genre.equalsIgnoreCase("unknown"))
@@ -47,6 +48,8 @@ public static NetflixOriginal instantiateFromInput(Scanner keyboard){
 		starRating = keyboard.nextDouble();
 		keyboard.nextLine(); //consume the newline character left by nextDouble()
 	}
+
+	
 	
 	//create and intitialize a NetflixOriginal object with the user data.
 	NetflixOriginal tempNetflixOriginal = new NetflixOriginal(name, starRating, genre);
