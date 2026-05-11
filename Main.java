@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+
 public class Main
 {
 	public static void main(String[] args)
@@ -25,21 +26,22 @@ public static NetflixOriginal instantiateFromInput(Scanner keyboard){
 	String name, genre;
 	double starRating;
 
+	
 	System.out.print("Please enter the name of the show: ");
-	name = keyboard.next();
+	name = keyboard.nextLine();
 	System.out.print("Please enter the star rating: ");
 	starRating = keyboard.nextDouble();
 	keyboard.nextLine(); //consume the newline character left by nextDouble()
 	System.out.print("Please enter the genre: ");
-	genre = keyboard.next();
+	genre = keyboard.nextLine();
 
-
-	//do while loop genre
-	while(!genre.equalsIgnoreCase("drama") && !genre.equalsIgnoreCase("comedy") && !genre.equalsIgnoreCase("horror") && !genre.equalsIgnoreCase("action") && !genre.equalsIgnoreCase("science fiction") && !genre.equalsIgnoreCase("anime") && !genre.equalsIgnoreCase("reality") && !genre.equalsIgnoreCase("unknown"))
+	
+	
+	do
 	{
 		System.out.println("Invalid genre. Please try again: ");
 		genre = keyboard.nextLine();
-	}
+	} while(!genre.equalsIgnoreCase("drama") && !genre.equalsIgnoreCase("comedy") && !genre.equalsIgnoreCase("horror") && !genre.equalsIgnoreCase("action") && !genre.equalsIgnoreCase("science fiction") && !genre.equalsIgnoreCase("anime") && !genre.equalsIgnoreCase("reality") && !genre.equalsIgnoreCase("unknown"));
 	
 	// Do while loop to get valid star rating from user input.
 	while (starRating < 0.0 || starRating > 5.0)
@@ -49,12 +51,13 @@ public static NetflixOriginal instantiateFromInput(Scanner keyboard){
 		keyboard.nextLine(); //consume the newline character left by nextDouble()
 	}
 
-	
+
 	
 	//create and intitialize a NetflixOriginal object with the user data.
 	NetflixOriginal tempNetflixOriginal = new NetflixOriginal(name, starRating, genre);
 
 	return tempNetflixOriginal;
+
 }
 
 
