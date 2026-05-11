@@ -29,7 +29,7 @@ public static NetflixOriginal instantiateFromInput(Scanner keyboard){
 	name = keyboard.nextLine();
 	
 
-	System.out.println("Please enter the star rating:  ");
+	System.out.println("Please enter the star rating: ");
 	starRating = keyboard.nextDouble();
 	keyboard.nextLine(); //consume the newline character left by nextDouble()
 	
@@ -37,9 +37,9 @@ public static NetflixOriginal instantiateFromInput(Scanner keyboard){
 	genre = keyboard.nextLine();
 
 	//do while loop genre
-	while(!genre.equalsIgnoreCase("Action") && !genre.equalsIgnoreCase("Comedy") && !genre.equalsIgnoreCase("Drama") && !genre.equalsIgnoreCase("Horror") && !genre.equalsIgnoreCase("Science Fiction"))
+	while(!genre.equalsIgnoreCase("drama") && !genre.equalsIgnoreCase("comedy") && !genre.equalsIgnoreCase("horror") && !genre.equalsIgnoreCase("action") && !genre.equalsIgnoreCase("science fiction") && !genre.equalsIgnoreCase("anime") && !genre.equalsIgnoreCase("reality") && !genre.equalsIgnoreCase("unknown"))
 	{
-		System.out.println("Invalid genre. Please enter one of the following genres: Action, Comedy, Drama, Horror, Science Fiction: ");
+		System.out.println("Invalid genre. Please try again: ");
 		genre = keyboard.nextLine();
 	}
 	
